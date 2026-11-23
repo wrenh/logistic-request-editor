@@ -1,0 +1,9 @@
+{
+  "name": "first-factorio-mod",
+  "version": "0.1.0",
+  "title": "My First Factorio Mod",
+  "author": "YourGitHubName",
+  "factorio_version": "2.1",
+  "dependencies": ["base >= 2.1.0"]
+}
+
