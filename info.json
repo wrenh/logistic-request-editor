@@ -1,9 +1,10 @@
 {
   "name": "first-factorio-mod",
-  "version": "0.1.0",
-  "title": "My First Factorio Mod",
-  "author": "YourGitHubName",
+  "version": "0.12.16",
+  "title": "Bulk Logistic Request Editor",
+  "author": "MustBeZipTied",
+  "description": "Sort and bulk edit logistic requests, with capacity-aware amounts, quality and Undo. Supports platforms, personal requests, requester and buffer chests, vehicles, and cargo landing pads. Platforms also support import filters and minimum payloads.",
   "factorio_version": "2.1",
-  "dependencies": ["base >= 2.1.0"]
+  "dependencies": ["base >= 2.1.0", "space-age >= 2.1.0"]
 }
 
