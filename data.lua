@@ -1,5 +1,5 @@
 -- Saved GUIs may reference this frame style before configuration reset.
-data.raw["gui-style"].default.first_factorio_mod_edit_content = {
+data.raw["gui-style"].default.logistic_request_editor_edit_content = {
   type = "frame_style",
   parent = "inside_shallow_frame_with_padding",
   vertical_flow_style = {
@@ -8,7 +8,7 @@ data.raw["gui-style"].default.first_factorio_mod_edit_content = {
   }
 }
 
-data.raw["gui-style"].default.first_factorio_mod_edit_content_scroll = {
+data.raw["gui-style"].default.logistic_request_editor_edit_content_scroll = {
   type = "scroll_pane_style",
   parent = "scroll_pane",
   padding = 12,
@@ -20,33 +20,33 @@ data.raw["gui-style"].default.first_factorio_mod_edit_content_scroll = {
   vertical_flow_style = { type = "vertical_flow_style", vertical_spacing = 5 }
 }
 
-data.raw["gui-style"].default.first_factorio_mod_editor_icon_button = {
+data.raw["gui-style"].default.logistic_request_editor_editor_icon_button = {
   type = "button_style",
   parent = "frame_action_button",
   invert_colors_of_picture_when_hovered_or_toggled = false
 }
 
-local editor_icon = "__first-factorio-mod__/graphics/editor-icon.png"
-local editor_icon_small = "__first-factorio-mod__/graphics/editor-icon-small.png"
+local editor_icon = "__logistic-request-editor__/graphics/editor-icon.png"
+local editor_icon_small = "__logistic-request-editor__/graphics/editor-icon-small.png"
 data:extend {
   -- Saved GUIs may reference these sprites before configuration reset.
   {
     type = "sprite",
-    name = "first-factorio-mod-sort-ascending",
+    name = "logistic-request-editor-sort-ascending",
     filename = "__core__/graphics/arrows/table-header-sort-arrow-up-white.png",
     width = 16,
     height = 16
   },
   {
     type = "sprite",
-    name = "first-factorio-mod-sort-descending",
+    name = "logistic-request-editor-sort-descending",
     filename = "__core__/graphics/arrows/table-header-sort-arrow-down-white.png",
     width = 16,
     height = 16
   },
   {
     type = "sprite",
-    name = "first-factorio-mod-editor-icon",
+    name = "logistic-request-editor-editor-icon",
     filename = editor_icon_small,
     width = 24,
     height = 24,
@@ -54,7 +54,7 @@ data:extend {
   },
   {
     type = "custom-input",
-    name = "first-factorio-mod-reset-editor-position",
+    name = "logistic-request-editor-reset-editor-position",
     key_sequence = "",
     consuming = "none",
     localised_name = { "bulk-imports.reset-position-name" },
@@ -62,7 +62,7 @@ data:extend {
   },
   {
     type = "shortcut",
-    name = "first-factorio-mod-request-editor",
+    name = "logistic-request-editor-request-editor",
     action = "lua",
     toggleable = true,
     localised_name = { "bulk-imports.launcher-name" },

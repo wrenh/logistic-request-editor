@@ -29,7 +29,7 @@ for GitHub and Markdown preview, not copied into the portal draft.
 
 | Field | Suggestion |
 | --- | --- |
-| Display name | Bulk Logistic Request Editor |
+| Display name | Logistic Request Editor |
 | Category | Utilities |
 | Tags | Logistics, Logistic network, Storage |
 | Requirement | Factorio 2.1 with Space Age |

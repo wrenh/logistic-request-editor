@@ -1,4 +1,4 @@
-local prefix = "first-factorio-mod-"
+local prefix = "logistic-request-editor-"
 local definitions = {
   { type = "bool-setting", name = prefix .. "show-editor", default_value = true, order = "a-a" },
   {

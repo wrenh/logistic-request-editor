@@ -10,9 +10,9 @@ if (-not (Test-Path -LiteralPath $FactorioPath -PathType Leaf)) {
 
 $repository = Split-Path -Parent $PSScriptRoot
 $dataPath = [IO.Path]::GetFullPath((Join-Path (Split-Path -Parent $FactorioPath) '..\..\data'))
-$testRoot = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot ('first-factorio-mod-tests-' + [Guid]::NewGuid().ToString('N'))))
+$testRoot = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot ('logistic-request-editor-tests-' + [Guid]::NewGuid().ToString('N'))))
 $modDirectory = Join-Path $testRoot 'mods'
-$packagedMod = Join-Path $modDirectory 'first-factorio-mod'
+$packagedMod = Join-Path $modDirectory 'logistic-request-editor'
 $userData = Join-Path $testRoot 'user-data'
 $scenario = Join-Path $userData 'scenarios\bulk-import-tests'
 New-Item -ItemType Directory -Path $packagedMod, $scenario -Force | Out-Null
@@ -35,7 +35,7 @@ Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'scenario\control.lua') -Destina
 
 @('[path]', ('read-data=' + $dataPath), ('write-data=' + $userData)) |
     Set-Content -LiteralPath (Join-Path $testRoot 'config.ini') -Encoding ASCII
-$mods = foreach ($name in @('base', 'elevated-rails', 'quality', 'recycler', 'space-age', 'first-factorio-mod')) {
+$mods = foreach ($name in @('base', 'elevated-rails', 'quality', 'recycler', 'space-age', 'logistic-request-editor')) {
     @{ name = $name; enabled = $true }
 }
 @{ mods = @($mods) } | ConvertTo-Json -Depth 4 |

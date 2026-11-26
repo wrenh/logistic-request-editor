@@ -1,15 +1,15 @@
 local styles = data.raw["gui-style"].default
 local button_styles = {}
-button_styles.content_vertical_spacing = styles.first_factorio_mod_edit_content_scroll.vertical_flow_style.vertical_spacing
-button_styles.content_always_draw_borders = styles.first_factorio_mod_edit_content_scroll.always_draw_borders
+button_styles.content_vertical_spacing = styles.logistic_request_editor_edit_content_scroll.vertical_flow_style.vertical_spacing
+button_styles.content_always_draw_borders = styles.logistic_request_editor_edit_content_scroll.always_draw_borders
 button_styles.content_inset_matches_frame = table.compare(
-  styles.first_factorio_mod_edit_content_scroll.graphical_set, styles.inside_shallow_frame.graphical_set)
-local content_style = styles.first_factorio_mod_edit_content_scroll
+  styles.logistic_request_editor_edit_content_scroll.graphical_set, styles.inside_shallow_frame.graphical_set)
+local content_style = styles.logistic_request_editor_edit_content_scroll
 button_styles.content_left_padding = content_style.left_padding or content_style.padding
 button_styles.content_right_padding = content_style.right_padding or content_style.padding
 button_styles.content_scrollbar_width = content_style.vertical_scrollbar_style.width
-local editor_icon = assert(data.raw.sprite["first-factorio-mod-editor-icon"])
-local editor_shortcut = assert(data.raw.shortcut["first-factorio-mod-request-editor"])
+local editor_icon = assert(data.raw.sprite["logistic-request-editor-editor-icon"])
+local editor_shortcut = assert(data.raw.shortcut["logistic-request-editor-request-editor"])
 button_styles.editor_icon = {
   filename = editor_icon.filename,
   width = editor_icon.width,
@@ -19,7 +19,7 @@ button_styles.editor_icon = {
   small_shortcut_filename = editor_shortcut.small_icon,
   small_shortcut_size = editor_shortcut.small_icon_size,
   header_button_size = styles.frame_action_button.size,
-  header_preserves_colors = styles.first_factorio_mod_editor_icon_button.invert_colors_of_picture_when_hovered_or_toggled == false
+  header_preserves_colors = styles.logistic_request_editor_editor_icon_button.invert_colors_of_picture_when_hovered_or_toggled == false
 }
 
 local function capture(name)
@@ -46,10 +46,10 @@ capture("red_button")
 capture("tool_button")
 capture("dropdown")
 data:extend {
-  { type = "mod-data", name = "first-factorio-mod-test-button-styles", data = button_styles }
+  { type = "mod-data", name = "logistic-request-editor-test-button-styles", data = button_styles }
 }
 
-local prefix = "first-factorio-mod-test-"
+local prefix = "logistic-request-editor-test-"
 data:extend {
   {
     type = "item-group", name = prefix .. "group-a", order = "a",

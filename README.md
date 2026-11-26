@@ -1,4 +1,4 @@
-# Bulk Logistic Request Editor
+# Logistic Request Editor
 
 **Less clicking. More factory.**
 
@@ -103,9 +103,9 @@ are not edited.
 
 ## Using the mod
 
-1. Restart Factorio and enable **Bulk Logistic Request Editor**.
+1. Restart Factorio and enable **Logistic Request Editor**.
 2. Open a supported requester, or your character inventory for personal requests,
-   and the editor opens automatically by default. **Bulk request editor** in
+   and the editor opens automatically by default. **Logistic Request Editor** in
    Factorio's shortcut bar toggles it on or off. If its chest-and-check icon is
    hidden, enable it in the shortcut-bar customization menu. Visibility is
    remembered across supported inventories.
@@ -211,8 +211,7 @@ when visibility is enabled, using the remembered minimized/restored state.
 
 ## Per-player options
 
-Open **Settings > Mod settings > Per player** and find **Bulk Logistic Request
-Editor**.
+Open **Settings > Mod settings > Per player** and find **Logistic Request Editor**.
 
 | Option | Initial default |
 | --- | --- |

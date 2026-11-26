@@ -1,13 +1,13 @@
-local TEST_INTERFACE = "first-factorio-mod-tests"
+local TEST_INTERFACE = "logistic-request-editor-tests"
 local handlers = setmetatable({}, {
   __index = function(_, event)
     return function(data) remote.call(TEST_INTERFACE, "dispatch", event, data) end
   end
 })
-local PANEL_NAME = "first_factorio_mod_bulk_imports"
-local SHORTCUT_NAME = "first-factorio-mod-request-editor"
-local RESET_INPUT_NAME = "first-factorio-mod-reset-editor-position"
-local SETTING_PREFIX = "first-factorio-mod-"
+local PANEL_NAME = "logistic_request_editor_bulk_imports"
+local SHORTCUT_NAME = "logistic-request-editor-request-editor"
+local RESET_INPUT_NAME = "logistic-request-editor-reset-editor-position"
+local SETTING_PREFIX = "logistic-request-editor-"
 
 local function initialize()
   remote.call(TEST_INTERFACE, "initialize")
@@ -256,15 +256,15 @@ script.on_event(defines.events.on_tick, function()
   end
 
   -- Headless GUI getters omit inherited sizes; the fixture captures real prototype dimensions.
-  local button_styles = assert(prototypes.mod_data["first-factorio-mod-test-button-styles"]).data
+  local button_styles = assert(prototypes.mod_data["logistic-request-editor-test-button-styles"]).data
   local editor_icon = button_styles.editor_icon
   assert(editor_icon.shortcut_size == 32 and editor_icon.small_shortcut_size == 24
-    and editor_icon.shortcut_filename == "__first-factorio-mod__/graphics/editor-icon.png"
-    and editor_icon.small_shortcut_filename == "__first-factorio-mod__/graphics/editor-icon-small.png"
+    and editor_icon.shortcut_filename == "__logistic-request-editor__/graphics/editor-icon.png"
+    and editor_icon.small_shortcut_filename == "__logistic-request-editor__/graphics/editor-icon-small.png"
     and editor_icon.filename == editor_icon.small_shortcut_filename,
     "Shortcut and panel icons must use the thumbnail's appropriately resized variants")
-  assert(panel.titlebar.minimize.sprite == "first-factorio-mod-editor-icon"
-    and panel.titlebar.minimize.style.name == "first_factorio_mod_editor_icon_button"
+  assert(panel.titlebar.minimize.sprite == "logistic-request-editor-editor-icon"
+    and panel.titlebar.minimize.style.name == "logistic_request_editor_editor_icon_button"
     and panel.minimized_icon.sprite == panel.titlebar.minimize.sprite
     and editor_icon.width <= editor_icon.header_button_size and editor_icon.height <= editor_icon.header_button_size
     and panel.minimized_icon.style.maximal_width == 28 and panel.minimized_icon.style.maximal_height == 28
@@ -1578,7 +1578,7 @@ script.on_event(defines.events.on_tick, function()
     end
 
     local function assert_minimized()
-      assert(panel.minimized_icon.visible and panel.minimized_icon.sprite == "first-factorio-mod-editor-icon"
+      assert(panel.minimized_icon.visible and panel.minimized_icon.sprite == "logistic-request-editor-editor-icon"
         and panel.titlebar.minimize.sprite == panel.minimized_icon.sprite
         and panel.style.horizontal_align == "center"
         and panel.minimized_icon.style.minimal_width == 28
@@ -2391,7 +2391,7 @@ script.on_event(defines.events.on_tick, function()
     player.set_controller { type = defines.controllers.remote, surface = hub.surface, position = hub.position }
     open_requester(hub, defines.gui_type.entity)
     local sort_section = assert(point.add_section("Sorting integration tests"))
-    local prefix = "first-factorio-mod-test-"
+    local prefix = "logistic-request-editor-test-"
     local occupied = { 1, 3, 4, 6 }
     for index, fixture in ipairs({
       { name = "middle", min = 5, quality = "uncommon", planet = "gleba", source = "planet", payload = 5 },
@@ -3004,7 +3004,7 @@ script.on_event(defines.events.on_tick, function()
     inventory.set_bar(6)
     local requester = owner.get_requester_point()
     local selected = assert(requester.add_section("Balance units primary"))
-    local prefix = "first-factorio-mod-test-"
+    local prefix = "logistic-request-editor-test-"
     selected.set_slot(1, {
       value = { name = prefix .. "middle", quality = "normal" }, min = 5, max = 50
     })
@@ -3142,7 +3142,7 @@ script.on_event(defines.events.on_tick, function()
     local owner = make_hub("Secondary sorting tests")
     local requester = owner.get_requester_point()
     local section = assert(requester.add_section("Secondary sorting requests"))
-    local prefix = "first-factorio-mod-test-"
+    local prefix = "logistic-request-editor-test-"
     local occupied = { 1, 3, 4, 6 }
     for index, entry in ipairs({
       { name = "middle", quality = "normal", min = 4 },
@@ -3400,7 +3400,7 @@ script.on_event(defines.events.on_tick, function()
     outside.set_slot(1, { value = { name = "stone", quality = "normal" }, min = prototypes.item.stone.stack_size })
     local outside_original = outside.filters
     local foreign_frame = player.gui.screen.add {
-      type = "frame", name = "first_factorio_mod_guard_foreign", direction = "vertical"
+      type = "frame", name = "logistic_request_editor_guard_foreign", direction = "vertical"
     }
     local foreign = foreign_frame.add { type = "button", name = "foreign_button", caption = "Foreign GUI" }
     assert(foreign.get_mod() ~= panel.get_mod(), "The foreign GUI fixture must not be owned by the editor mod")

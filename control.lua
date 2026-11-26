@@ -1,10 +1,10 @@
 local util = require("__core__.lualib.util")
 
-local PANEL_NAME = "first_factorio_mod_bulk_imports"
-local SHORTCUT_NAME = "first-factorio-mod-request-editor"
-local EDITOR_ICON = "first-factorio-mod-editor-icon"
-local RESET_INPUT_NAME = "first-factorio-mod-reset-editor-position"
-local SETTING_PREFIX = "first-factorio-mod-"
+local PANEL_NAME = "logistic_request_editor_bulk_imports"
+local SHORTCUT_NAME = "logistic-request-editor-request-editor"
+local EDITOR_ICON = "logistic-request-editor-editor-icon"
+local RESET_INPUT_NAME = "logistic-request-editor-reset-editor-position"
+local SETTING_PREFIX = "logistic-request-editor-"
 local SETTINGS = {
   visible = SETTING_PREFIX .. "show-editor",
   placement = SETTING_PREFIX .. "placement",
@@ -1360,7 +1360,7 @@ local function open_panel(player, target, form)
     type = "sprite-button",
     name = "minimize",
     sprite = EDITOR_ICON,
-    style = "first_factorio_mod_editor_icon_button",
+    style = "logistic_request_editor_editor_icon_button",
     tooltip = { "bulk-imports.minimize-tooltip" }
   }
   titlebar.add {
@@ -1394,7 +1394,7 @@ local function open_panel(player, target, form)
     name = "content",
     horizontal_scroll_policy = "never",
     vertical_scroll_policy = "auto",
-    style = "first_factorio_mod_edit_content_scroll"
+    style = "logistic_request_editor_edit_content_scroll"
   }
   content.style.width = PANEL_WIDTH - 24
   local selection_label = content.add { type = "label", caption = { "bulk-imports.section" } }

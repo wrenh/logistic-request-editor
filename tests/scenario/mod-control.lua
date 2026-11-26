@@ -20,7 +20,7 @@ require("editor")
 script = bootstrap
 
 -- Dispatch in the real mod context so writes to its own user settings are authorized.
-remote.add_interface("first-factorio-mod-tests", {
+remote.add_interface("logistic-request-editor-tests", {
   initialize = function() initialize() end,
   configure = function() configure({}) end,
   dispatch = function(event, data)

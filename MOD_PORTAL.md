@@ -1,6 +1,6 @@
-# Bulk Logistic Request Editor
+# Logistic Request Editor
 
-Bulk Logistic Request Editor adds a compact panel for editing
+Logistic Request Editor adds a compact panel for editing
 **item selections within one or more logistics requests**. Set amounts,
 sort items, adjust quality, and manage platform imports at scale with fewer clicks.
 
