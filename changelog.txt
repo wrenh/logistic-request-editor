@@ -1,0 +1,32 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.13.3
+Date: 2026-11-26
+  Bugfixes:
+    - Do not remove the current editor when a previous or still-open inventory emits a close notification.
+    - Reconcile GUI changes after close callbacks settle and recover missing panes when Show editor is enabled.
+    - Always honor the latest per-player show/hide choice across all supported inventories and combinators.
+---------------------------------------------------------------------------------------------------
+Version: 0.13.2
+Date: 2026-11-26
+  Changes:
+    - Use only the checkbox list for request and signal sections; remove selection-mode radios and the request dropdown.
+    - Start fresh editors with no sections selected and remove the obsolete selection-mode player option.
+    - Default fresh platform import controls to Any planet and All without replacing existing drafts.
+---------------------------------------------------------------------------------------------------
+Version: 0.13.1
+Date: 2026-11-26
+  Changes:
+    - Replace the amount-mode buttons with Balanced and Custom radio choices, defaulting to Custom.
+    - Custom restores the numeric draft and unit from before balancing. Mode changes remain staged until Apply.
+    - Remove the extra planet-clear button; right-click the native planet selector to remove its restriction.
+  Info:
+    - Update player and publishing documentation for constant-combinator support and the refined controls.
+---------------------------------------------------------------------------------------------------
+Version: 0.13.0
+Date: 2026-11-26
+  Features:
+    - Support constant-combinator sections with sorting, signed signal values, item quality, Undo and window controls.
+    - Keep Stacks for item signals; fluid and virtual signals use raw counts.
+    - Preserve zero-valued signals, shared groups, section multipliers and combinator on/off state.
+  Changes:
+    - Hide request-only controls when editing constant combinators.
